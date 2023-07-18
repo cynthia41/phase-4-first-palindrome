@@ -1,0 +1,28 @@
+var firstPalindrome = function(words) {: This line declares a function called firstPalindrome and assigns it to the variable firstPalindrome. The function takes an array of words as its input parameter.
+
+    let Arry = [];: This initializes an empty array called Arry, which will be used to store the palindrome words or empty strings.
+    
+    for (let w of words) {: This starts a for...of loop that iterates through each element (w) in the words array.
+    
+    if (w.split('').reverse().join('') === w) {: This line checks if the current word (w) is a palindrome. It does so by using the following steps:
+    a. w.split(''): This converts the word w into an array of characters. For example, if w is "radar", this step will produce ["r", "a", "d", "a", "r"].
+    b. .reverse(): This reverses the array of characters. In our example, it will become ["r", "a", "d", "a", "r"] (same as before, since "radar" is a palindrome).
+    c. .join(''): This joins the characters back together to form a string. In our example, it will become "radar".
+    d. === w: This checks if the reversed word is equal to the original word (w). If they are the same, it means w is a palindrome, and the code inside the if block will execute.
+    
+    Arry.push(w);: If the word w is a palindrome (as checked in the previous step), it is added to the Arry array.
+    
+    } else {: If the word w is not a palindrome, the code inside the else block will execute.
+    
+    Arry.push('');: In this case, an empty string is added to the Arry array.
+    
+    return Arry.find(word => word !== '') || '';: After the loop, the code uses the find method on the Arry array to find the first non-empty string (i.e., the first palindrome word). If a palindrome word is found, it is returned. Otherwise, if no palindrome word was found (i.e., all elements in Arry are empty strings), it returns an empty string.
+    
+    To summarize, the function iterates through the input array of words and stores each word in a new array Arry after determining if it is a palindrome or not. Then it returns the first palindrome word found in the array or an empty string if no palindrome word is present.
+    
+    
+    
+    
+    
+    
+    
